@@ -32,9 +32,9 @@ Dados:
 {json.dumps(exemplos, indent=2, ensure_ascii=False)}
 
 Tarefa:
-- Liste os assuntos que mais geram transbordo.
-- Sugira possíveis motivos para os altos volumes de transbordo.
-- Proponha melhorias práticas para reduzir os transbordos e melhorar a experiência do usuário.
+- Liste os cinco assuntos que mais geraram transbordo em cada mês.
+- Liste os cinco assuntos que mais geraram transbordo somando todos os mêses do arquivo.
+- Liste os dois assuntos que mais aumentaram em transbordo de forma proporcional ao total de transbordos do mês.
 
 Responda de forma clara, objetiva e organizada.
         """
@@ -46,10 +46,10 @@ Responda de forma clara, objetiva e organizada.
         response = openai.chat.completions.create(
             model="gpt-4",
             messages=[
-                {"role": "system", "content": "Você é um especialista em análise de chatbot."},
+                {"role": "system", "content": "Você é um especialista em análise de dados de um chatbot."},
                 {"role": "user", "content": prompt}
             ],
-        #suffix="História: ",
+        #suffix=".: ",
         temperature=0.5,
         #max_tokens=300,
         #top_p=0.2,
