@@ -48,7 +48,15 @@ Responda de forma clara, objetiva e organizada.
             messages=[
                 {"role": "system", "content": "Você é um especialista em análise de chatbot."},
                 {"role": "user", "content": prompt}
-            ]
+            ],
+        #suffix="História: ",
+        temperature=0.5,
+        #max_tokens=300,
+        #top_p=0.2,
+        #frequency_penalty=1.7,
+        #presence_penalty=1.8,
+        #stop=["."],
+        #best_of=1
         )
 
         return response.choices[0].message.content
