@@ -9,7 +9,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 st.set_page_config(page_title="Análise de Transbordos do Chatbot", layout="wide")
 
-st.title("🤖 Análise de Transbordos do Chatbot")
+st.title("🤖 Análise de Transbordos do Chatbot.")
 st.write("Faça upload de uma base contendo os **assuntos** e os respectivos **números de transbordos** para gerar uma análise com IA.")
 
 # Upload do arquivo
